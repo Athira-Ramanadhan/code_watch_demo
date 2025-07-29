@@ -1,38 +1,269 @@
-.App {
-  text-align: center;
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6fa;
+  color: #1e293b;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2 {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* === Navbar === */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px 10%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  color: #1c58b9;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  font-size: 20px;
+  color: #334155;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #3b82f6;
+}
+
+/* === Hero Section === */
+.hero {
+  padding: 100px 10%;
+  background: linear-gradient(to right, #e0ecff, #f4f6fa);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.brand {
+  color: #1c58b9;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #4b5563;
+}
+
+.btn-glow,
+.btn-outline {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-glow {
+  background: #1c58b9;
+  color: white;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+  border: none;
+}
+
+.btn-glow:hover {
+  background: #1c58b9;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  margin-left: 15px;
+}
+
+.btn-outline:hover {
+  background: #1c58b9;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-img-box {
+  flex: 1;
+  max-width: 450px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-img-box img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* === About Section === */
+.about {
+  padding: 80px 10%;
+  background-color: #f9f6f6;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 550px;
+}
+
+.about h2 {
+  font-size: 34px;
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 0;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 480px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* === Features Section === */
+.features {
+  padding: 100px 10%;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 34px;
+  color: #1d4ed8;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.25);
+}
+
+.feature-card i {
+  font-size: 32px;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #475569;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  font-size: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+.login-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.login-btn:hover {
+  color: #3b82f6;
+}
+
+/* === Section Scroll Fix === */
+section {
+  scroll-margin-top: 120px;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+  .hero-content,
+  .about-container {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 15px;
   }
 }
